@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><body><pre id="results"></pre><script>
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    try {
+      const doc = document.getElementById('frame').contentDocument;
+      const sections = ['home', 'about', 'education', 'skills', 'projects', 'certifications', 'contact'];
+      const report = {
+        sections: {},
+        navbarFound: !!doc.querySelector('.navbar'),
+        navLinksCount: doc.querySelectorAll('.nav-link').length,
+        contactFormFound: !!doc.getElementById('contact-form'),
+        canvasWidth: doc.getElementById('neural-canvas')?.width,
+        canvasHeight: doc.getElementById('neural-canvas')?.height,
+        preloaderHidden: doc.getElementById('preloader')?.classList.contains('preloader-hidden'),
+        bodyClass: doc.body.className
+      };
+
+      sections.forEach(id => {
+        const el = doc.getElementById(id);
+        report.sections[id] = el ? { exists: true, height: el.offsetHeight, top: el.offsetTop } : { exists: false };
+      });
+
+      document.getElementById('results').innerText = JSON.stringify(report, null, 2);
+    } catch(e) {
+      document.getElementById('results').innerText = 'ERROR: ' + e.message;
+    }
+  }, 2500);
+});
+</script>
+<iframe src="index.html" style="width:1440px; height:900px;" id="frame"></iframe>
+</body></html>

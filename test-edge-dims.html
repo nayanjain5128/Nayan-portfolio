@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><body><pre id="out"></pre><script>
+window.addEventListener('load', () => {
+  document.getElementById('out').innerText = JSON.stringify({
+    windowInnerWidth: window.innerWidth,
+    documentElementClientWidth: document.documentElement.clientWidth,
+    documentElementScrollWidth: document.documentElement.scrollWidth,
+    bodyScrollWidth: document.body.scrollWidth,
+    navbarWidth: document.querySelector('.navbar')?.offsetWidth,
+    navbarWrapperWidth: document.querySelector('.navbar-wrapper')?.offsetWidth,
+    toggleBtnDisplay: window.getComputedStyle(document.getElementById('mobile-menu-toggle')).display
+  }, null, 2);
+});
+</script><script src="script.js"></script></body></html>

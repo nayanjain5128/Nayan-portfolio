@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nayan Jain | AI &amp; ML Student Portfolio</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Personal portfolio of Nayan Jain, 1st-year B.Tech CSE (AI &amp; ML) student at JECRC University, Jaipur. Exploring C, Python, Agentic AI, and Neural Networks.">
+  <meta name="keywords" content="Nayan Jain, Portfolio, AI, Machine Learning, Python, C, JECRC University, Jaipur, Neural Network, Agentic AI">
+  <meta name="author" content="Nayan Jain">
+  <meta name="theme-color" content="#070b16">
+  
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nayanjain5128.github.io/">
+  <meta property="og:title" content="Nayan Jain | AI &amp; ML Student Portfolio">
+  <meta property="og:description" content="Living Neural Network Portfolio of Nayan Jain — First-year B.Tech CSE (AI &amp; ML) at JECRC University, Jaipur.">
+  <meta property="og:image" content="assets/favicon.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nayan Jain | AI &amp; ML Student Portfolio">
+  <meta name="twitter:description" content="Living Neural Network Portfolio of Nayan Jain — First-year B.Tech CSE (AI &amp; ML) at JECRC University, Jaipur.">
+  <meta name="twitter:image" content="assets/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading-active">
+
+  <!-- ACCESSIBILITY: Skip Link for keyboard navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- PRELOADER: Nodes connect to form "NJ" initials -->
+  <div id="preloader" class="preloader" role="dialog" aria-modal="true" aria-label="Loading portfolio neural matrix">
+    <div class="preloader-content">
+      <div class="preloader-canvas-wrapper">
+        <canvas id="preloader-canvas" width="320" height="200" aria-label="Neural nodes connecting to form NJ"></canvas>
+      </div>
+      <div class="preloader-status">
+        <span class="pulse-indicator"></span>
+        <span id="preloader-text" class="status-text">INITIALIZING SYNAPTIC MATRIX...</span>
+      </div>
+      <div class="preloader-bar-bg">
+        <div id="preloader-progress" class="preloader-progress-bar"></div>
+      </div>
+      <button id="skip-preloader-btn" class="skip-preloader-btn" aria-label="Skip preloader animation">Skip Intro</button>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR (Desktop only) -->
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- NEURAL BACKGROUND CANVAS -->
+  <canvas id="neural-canvas" class="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- FLOATING GLASS NAVBAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar glass-panel" aria-label="Main Navigation">
+      <a href="#home" class="nav-brand" aria-label="Nayan Jain Portfolio Home">
+        <span class="brand-neural-node" aria-hidden="true"></span>
+        <span class="brand-text">NAYAN<span class="brand-accent">.AI</span></span>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <ul class="nav-links" id="desktop-nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home"><span class="nav-index">01.</span>Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about"><span class="nav-index">02.</span>About</a></li>
+        <li><a href="#education" class="nav-link" data-section="education"><span class="nav-index">03.</span>Education</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills"><span class="nav-index">04.</span>Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects"><span class="nav-index">05.</span>Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications"><span class="nav-index">06.</span>Certifications</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact"><span class="nav-index">07.</span>Contact</a></li>
+      </ul>
+
+      <!-- Active Node Tracker Indicator on Navbar -->
+      <div class="nav-indicator" id="nav-indicator" aria-hidden="true"></div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-expanded="false" aria-controls="mobile-nav-menu" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar top-bar"></span>
+        <span class="hamburger-bar mid-bar"></span>
+        <span class="hamburger-bar bot-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MOBILE FULL-SCREEN MENU OVERLAY -->
+  <div id="mobile-nav-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-tag">// NEURAL NAVIGATION</span>
+      </div>
+      <ul class="mobile-links">
+        <li><a href="#home" class="mobile-link" data-section="home"><span class="nav-index">01.</span>Home</a></li>
+        <li><a href="#about" class="mobile-link" data-section="about"><span class="nav-index">02.</span>About Me</a></li>
+        <li><a href="#education" class="mobile-link" data-section="education"><span class="nav-index">03.</span>Education</a></li>
+        <li><a href="#skills" class="mobile-link" data-section="skills"><span class="nav-index">04.</span>Skills</a></li>
+        <li><a href="#projects" class="mobile-link" data-section="projects"><span class="nav-index">05.</span>Projects</a></li>
+        <li><a href="#certifications" class="mobile-link" data-section="certifications"><span class="nav-index">06.</span>Certifications</a></li>
+        <li><a href="#contact" class="mobile-link" data-section="contact"><span class="nav-index">07.</span>Contact</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <div class="mobile-socials">
+          <a href="https://github.com/nayanjain5128" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nayan-jain-b10787413" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="mailto:njainmathania@gmail.com" aria-label="Email Nayan">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+        <p class="mobile-status">// JECRC UNIVERSITY · AI &amp; ML</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content">
+
+    <!-- ================================================================= -->
+    <!-- 1. HOME SECTION                                                   -->
+    <!-- Note: Do NOT mention achievements or certificates in this section -->
+    <!-- ================================================================= -->
+    <section id="home" class="section section-home" data-hub-id="home" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        <div class="hero-content glass-panel" data-tilt>
+          
+          <div class="terminal-badge">
+            <span class="live-pulse"></span>
+            <span class="terminal-mono">// SYSTEM: NEURAL_NODE_01 :: ONLINE</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-headline">
+            <span class="glitch-text" data-text="Nayan Jain">Nayan Jain</span>
+          </h1>
+
+          <!-- Dynamic Typing Animation Line -->
+          <div class="hero-typing-box" aria-live="polite">
+            <span class="typing-prompt">&gt; </span>
+            <span id="typing-text" class="typing-text">AI &amp; ML Student</span>
+            <span class="typing-cursor" aria-hidden="true">_</span>
+          </div>
+
+          <!-- Hero Subtitle -->
+          <p class="hero-subline">
+            B.Tech CSE (AI &amp; ML) @ JECRC University, Jaipur
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary magnetic-btn">
+              <span class="btn-text">View Projects</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic-btn">
+              <span class="btn-text">Contact Me</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+
+          <!-- Social Icon Links -->
+          <div class="hero-socials">
+            <a href="https://github.com/nayanjain5128" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+              <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              <span class="social-tooltip">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nayan-jain-b10787413" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span class="social-tooltip">LinkedIn</span>
+            </a>
+            <a href="mailto:njainmathania@gmail.com" class="social-icon-btn" aria-label="Direct Email">
+              <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span class="social-tooltip">Email</span>
+            </a>
+          </div>
+
+          <!-- Neural Synapse Scroll Hint -->
+          <div class="scroll-synapse-hint">
+            <span class="synapse-dot"></span>
+            <span class="synapse-label">Scroll to activate next synaptic node</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 2. ABOUT ME SECTION                                               -->
+    <!-- ================================================================= -->
+    <section id="about" class="section section-about" data-hub-id="about" aria-labelledby="about-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag">// NODE_02 :: BIOMETRIC_DATA</div>
+          <h2 id="about-title" class="section-title">About <span class="gradient-text">Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Profile Photo Placeholder with Glowing Neural Aura Ring -->
+          <div class="about-photo-wrapper">
+            <div class="profile-frame">
+              <div class="neural-aura-ring outer-ring" aria-hidden="true"></div>
+              <div class="neural-aura-ring inner-ring" aria-hidden="true"></div>
+              
+              <div class="profile-image-container">
+                <!-- If profile.jpg is added to /assets, it replaces the avatar automatically -->
+                <img id="profile-img" src="assets/profile.jpg" alt="Nayan Jain" class="profile-img" onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='flex';">
+                
+                <!-- Fallback Cybernetic Monogram Avatar -->
+                <div id="profile-fallback" class="profile-fallback" style="display:none;" aria-label="Nayan Jain Monogram Placeholder">
+                  <div class="monogram-initials">NJ</div>
+                  <div class="monogram-nodes">
+                    <span class="node-dot dot-1"></span>
+                    <span class="node-dot dot-2"></span>
+                    <span class="node-dot dot-3"></span>
+                  </div>
+                  <span class="avatar-tip">Place photo at <code>assets/profile.jpg</code></span>
+                </div>
+              </div>
+
+              <!-- Status Tag -->
+              <div class="profile-badge">
+                <span class="status-pulse-cyan"></span>
+                <span>Age: 19 · Jaipur</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio & Story -->
+          <div class="about-card glass-panel" data-tilt>
+            <h3 class="about-card-title">Curiosity Driven · AI &amp; Software Explorer</h3>
+            
+            <p class="about-lead">
+              I'm <strong>Nayan</strong>, a first-year B.Tech student in <strong>Computer Science (AI &amp; ML)</strong> at <strong>JECRC University, Jaipur</strong>. I'm currently learning <strong>C and Python</strong> and building my foundation in programming, algorithmic logic, and data science.
+            </p>
+            
+            <p class="about-body">
+              Outside of coding, I enjoy playing sports, exploring new AI tools as soon as they launch, and reading about space and space technology. I'm curious, always learning, and excited to build things that matter.
+            </p>
+
+            <!-- Quick Specs Row -->
+            <div class="specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">STATUS</span>
+                <span class="spec-val">1st Year Undergrad</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">DEGREE</span>
+                <span class="spec-val">B.Tech CSE (AI &amp; ML)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">CAMPUS</span>
+                <span class="spec-val">JECRC University</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">GRADUATION</span>
+                <span class="spec-val">2030 (Expected)</span>
+              </div>
+            </div>
+
+            <!-- Beyond Code: 3 Interest Chips -->
+            <div class="beyond-code-section">
+              <h4 class="beyond-code-title">// BEYOND CODE</h4>
+              <div class="interest-chips">
+                
+                <div class="interest-chip">
+                  <div class="chip-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20M2 12h20M4.93 4.93a10 10 0 0 1 14.14 0"/></svg>
+                  </div>
+                  <div class="chip-content">
+                    <span class="chip-name">Sports</span>
+                    <span class="chip-desc">Energy &amp; physical drive</span>
+                  </div>
+                </div>
+
+                <div class="interest-chip">
+                  <div class="chip-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                  </div>
+                  <div class="chip-content">
+                    <span class="chip-name">New AI Tools</span>
+                    <span class="chip-desc">Day-1 early adopter</span>
+                  </div>
+                </div>
+
+                <div class="interest-chip">
+                  <div class="chip-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3m5.5-2.5l2-2M15 6l3 3M17 3l4 4-2.5 2.5-4-4L17 3z"/><path d="M9 12l6-6"/></svg>
+                  </div>
+                  <div class="chip-content">
+                    <span class="chip-name">Space Tech</span>
+                    <span class="chip-desc">Cosmos &amp; orbital systems</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 3. EDUCATION SECTION                                              -->
+    <!-- Vertical timeline styled as connected neural nodes               -->
+    <!-- ================================================================= -->
+    <section id="education" class="section section-education" data-hub-id="education" aria-labelledby="education-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// NODE_03 :: ACADEMIC_PATHWAY</div>
+          <h2 id="education-title" class="section-title">Education <span class="gradient-text">Timeline</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Central Neural Synapse Beam -->
+          <div class="timeline-beam" aria-hidden="true"></div>
+
+          <!-- Node 1: Current B.Tech (Active) -->
+          <div class="timeline-node current-node" data-tilt>
+            <div class="node-marker" aria-hidden="true">
+              <span class="marker-core"></span>
+              <span class="marker-ripple"></span>
+            </div>
+            
+            <div class="timeline-card glass-panel">
+              <div class="timeline-card-header">
+                <span class="edu-badge badge-active">CURRENTLY 1ST YEAR</span>
+                <span class="edu-years">2026 – 2030 (Expected)</span>
+              </div>
+              <h3 class="edu-degree">B.Tech in Computer Science Engineering</h3>
+              <h4 class="edu-specialization">Specialization: Artificial Intelligence &amp; Machine Learning (AI &amp; ML)</h4>
+              <p class="edu-institution">
+                <svg class="inline-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                JECRC University, Jaipur, Rajasthan
+              </p>
+              <div class="edu-description">
+                Focusing on core programming fundamentals, mathematics for machine learning, data structures, and computer science principles. Actively building projects in C and Python.
+              </div>
+            </div>
+          </div>
+
+          <!-- OPTIONAL SECONDARY EDUCATION NODES (Configurable via script.js flag) -->
+          <!-- Node 2: Class 12th (Senior Secondary) -->
+          <div id="edu-node-12th" class="timeline-node optional-node" style="display: none;" data-tilt>
+            <div class="node-marker" aria-hidden="true">
+              <span class="marker-core"></span>
+            </div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-card-header">
+                <span class="edu-badge badge-past">COMPLETED</span>
+                <span class="edu-years" id="edu-12th-year">Senior Secondary (12th)</span>
+              </div>
+              <h3 class="edu-degree" id="edu-12th-title">Class XII — Science (PCM)</h3>
+              <p class="edu-institution" id="edu-12th-school">Senior Secondary School</p>
+              <div class="edu-description" id="edu-12th-desc">
+                Core subjects: Physics, Chemistry, Mathematics, and Computer Science.
+              </div>
+            </div>
+          </div>
+
+          <!-- Node 3: Class 10th (Secondary) -->
+          <div id="edu-node-10th" class="timeline-node optional-node" style="display: none;" data-tilt>
+            <div class="node-marker" aria-hidden="true">
+              <span class="marker-core"></span>
+            </div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-card-header">
+                <span class="edu-badge badge-past">COMPLETED</span>
+                <span class="edu-years" id="edu-10th-year">Secondary (10th)</span>
+              </div>
+              <h3 class="edu-degree" id="edu-10th-title">Class X — Secondary Education</h3>
+              <p class="edu-institution" id="edu-10th-school">High School</p>
+              <div class="edu-description" id="edu-10th-desc">
+                Foundational sciences, mathematics, and analytical aptitude.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 4. SKILLS SECTION                                                 -->
+    <!-- Interactive skill constellation / node cluster (No fake %)       -->
+    <!-- ================================================================= -->
+    <section id="skills" class="section section-skills" data-hub-id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// NODE_04 :: SYNAPTIC_CAPABILITIES</div>
+          <h2 id="skills-title" class="section-title">Skill <span class="gradient-text">Constellation</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Authentic, progressive competencies mapped as interactive neural clusters. No artificial percentages.
+          </p>
+        </div>
+
+        <!-- Highlighted Active Neural Synapse: Currently Learning -->
+        <div class="learning-banner glass-panel">
+          <div class="learning-banner-glow" aria-hidden="true"></div>
+          <div class="learning-banner-left">
+            <span class="live-pulse"></span>
+            <span class="learning-title">ACTIVE LEARNING NODE:</span>
+            <span class="learning-subjects">C &amp; Python Foundations · Data Science Pipelines · Agentic Workflows</span>
+          </div>
+          <div class="learning-banner-right">
+            <span class="neural-frequency-tag">// FREQ: 24/7 CURIOUS</span>
+          </div>
+        </div>
+
+        <!-- Constellation Clusters Grid -->
+        <div class="skills-clusters-grid">
+
+          <!-- CLUSTER 1: Programming Languages -->
+          <div class="skill-cluster glass-panel" data-tilt>
+            <div class="cluster-header">
+              <div class="cluster-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="cluster-meta">
+                <h3 class="cluster-name">Programming</h3>
+                <span class="cluster-count">2 Core Languages</span>
+              </div>
+            </div>
+
+            <div class="skills-nodes-list">
+              
+              <!-- C Language Node -->
+              <div class="skill-node" tabindex="0">
+                <div class="node-icon-symbol">C</div>
+                <div class="node-info">
+                  <div class="node-name-row">
+                    <span class="node-name">C Language</span>
+                    <span class="node-level-badge level-beginner">Beginner</span>
+                  </div>
+                  <p class="node-desc">Logic building, syntax, loops, memory concepts &amp; problem-solving.</p>
+                </div>
+              </div>
+
+              <!-- Python Node -->
+              <div class="skill-node active-learning-node" tabindex="0">
+                <div class="node-icon-symbol">PY</div>
+                <div class="node-info">
+                  <div class="node-name-row">
+                    <span class="node-name">Python</span>
+                    <span class="node-level-badge level-learning">Learning · Active</span>
+                  </div>
+                  <p class="node-desc">Core syntax, data structures, automation scripts, and ML prerequisites.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CLUSTER 2: Data & AI -->
+          <div class="skill-cluster glass-panel" data-tilt>
+            <div class="cluster-header">
+              <div class="cluster-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <div class="cluster-meta">
+                <h3 class="cluster-name">Data &amp; Artificial Intelligence</h3>
+                <span class="cluster-count">3 Applied Competencies</span>
+              </div>
+            </div>
+
+            <div class="skills-nodes-list">
+              
+              <!-- Data Science Methodology -->
+              <div class="skill-node" tabindex="0">
+                <div class="node-icon-symbol">DS</div>
+                <div class="node-info">
+                  <div class="node-name-row">
+                    <span class="node-name">Data Science Methodology</span>
+                    <span class="node-level-badge level-progress">IBM Course · In Progress</span>
+                  </div>
+                  <p class="node-desc">Iterative workflow: Business Understanding, Modeling &amp; Evaluation.</p>
+                </div>
+              </div>
+
+              <!-- Data Visualization -->
+              <div class="skill-node" tabindex="0">
+                <div class="node-icon-symbol">DV</div>
+                <div class="node-info">
+                  <div class="node-name-row">
+                    <span class="node-name">Data Visualization</span>
+                    <span class="node-level-badge level-progress">IBM Course · In Progress</span>
+                  </div>
+                  <p class="node-desc">Visual storytelling, exploratory analysis, and data plotting insights.</p>
+                </div>
+              </div>
+
+              <!-- Agentic AI Workshop -->
+              <div class="skill-node" tabindex="0">
+                <div class="node-icon-symbol">AI</div>
+                <div class="node-info">
+                  <div class="node-name-row">
+                    <span class="node-name">Agentic AI</span>
+                    <span class="node-level-badge level-workshop">GDG Workshop</span>
+                  </div>
+                  <p class="node-desc">Autonomous agents, tool invocation, orchestration &amp; prompt design.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CLUSTER 3: Developer Tools -->
+          <div class="skill-cluster glass-panel" data-tilt>
+            <div class="cluster-header">
+              <div class="cluster-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="cluster-meta">
+                <h3 class="cluster-name">Tools &amp; Versioning</h3>
+                <span class="cluster-count">2 Core Tools</span>
+              </div>
+            </div>
+
+            <div class="skills-nodes-list">
+              
+              <!-- Git -->
+              <div class="skill-node" tabindex="0">
+                <div class="node-icon-symbol">GIT</div>
+                <div class="node-info">
+                  <div class="node-name-row">
+                    <span class="node-name">Git</span>
+                    <span class="node-level-badge level-tool">Version Control</span>
+                  </div>
+                  <p class="node-desc">Local version control, commits, branching, tracking change history.</p>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="skill-node" tabindex="0">
+                <div class="node-icon-symbol">GH</div>
+                <div class="node-info">
+                  <div class="node-name-row">
+                    <span class="node-name">GitHub</span>
+                    <span class="node-level-badge level-tool">Collaboration</span>
+                  </div>
+                  <p class="node-desc">Remote repos, workflow synchronization, open-source portfolio hosting.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 5. PROJECTS SECTION                                               -->
+    <!-- Easily extendable project cards with modular HTML structure       -->
+    <!-- ================================================================= -->
+    <section id="projects" class="section section-projects" data-hub-id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// NODE_05 :: CODE_REPOSITORIES</div>
+          <h2 id="projects-title" class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Hands-on code repositories and ongoing software developments.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT CARD 1: Beginner C Programs -->
+          <article class="project-card glass-panel" data-tilt>
+            <div class="card-glow-overlay" aria-hidden="true"></div>
+            
+            <div class="project-card-header">
+              <div class="project-terminal-tag">
+                <span class="tag-dot"></span>
+                <span>C_PROGRAMMING.EXE</span>
+              </div>
+              <span class="project-status-badge badge-active">Active Repo</span>
+            </div>
+
+            <h3 class="project-title">Beginner C Programs</h3>
+            
+            <p class="project-description">
+              Basic, beginner-level programs written while learning C. Explores fundamental programming concepts including variables, loops, conditionals, functions, arrays, and basic problem solving.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">CLI</span>
+              <span class="tech-tag">Algorithms</span>
+              <span class="tech-tag">Data Flow</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/nayanjain5128" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="View Beginner C Programs on GitHub">
+                <span>View on GitHub</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+              </a>
+            </div>
+          </article>
+
+
+          <!-- PROJECT CARD 2: Currently Building Placeholder -->
+          <article class="project-card glass-panel card-pulsing-placeholder" data-tilt>
+            <div class="card-pulse-scanner" aria-hidden="true"></div>
+            
+            <div class="project-card-header">
+              <div class="project-terminal-tag">
+                <span class="tag-dot pulse-violet"></span>
+                <span>IN_PIPELINE.PY</span>
+              </div>
+              <span class="project-status-badge badge-pulsing">Synthesizing...</span>
+            </div>
+
+            <h3 class="project-title">Currently Building</h3>
+            
+            <p class="project-description">
+              More projects coming soon. Currently developing upcoming AI prototypes, exploratory Python scripts, and data visualization experiments.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Science</span>
+              <span class="tech-tag">Agentic AI</span>
+            </div>
+
+            <div class="project-actions">
+              <div class="building-indicator">
+                <span class="radar-ping"></span>
+                <span class="building-text">Work in Progress · Deploying soon</span>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- ================================================================= -->
+          <!-- HOW TO ADD A NEW PROJECT CARD:                                    -->
+          <!-- Copy the block below, paste it here, and edit title, description,  -->
+          <!-- tech-tags, and GitHub / live demo links!                          -->
+          <!--                                                                   -->
+          <!-- <article class="project-card glass-panel" data-tilt>              -->
+          <!--   <div class="card-glow-overlay" aria-hidden="true"></div>        -->
+          <!--   <div class="project-card-header">                              -->
+          <!--     <div class="project-terminal-tag">                            -->
+          <!--       <span class="tag-dot"></span>                               -->
+          <!--       <span>PROJECT_NAME.PY</span>                                -->
+          <!--     </div>                                                        -->
+          <!--     <span class="project-status-badge badge-active">Live</span>    -->
+          <!--   </div>                                                          -->
+          <!--   <h3 class="project-title">Your Project Title</h3>               -->
+          <!--   <p class="project-description">Description of project...</p>    -->
+          <!--   <div class="project-tech-stack">                                -->
+          <!--     <span class="tech-tag">Python</span>                          -->
+          <!--     <span class="tech-tag">Pandas</span>                          -->
+          <!--   </div>                                                          -->
+          <!--   <div class="project-actions">                                   -->
+          <!--     <a href="YOUR_LINK" target="_blank" class="btn btn-outline">   -->
+          <!--       <span>View Repo</span>                                      -->
+          <!--     </a>                                                          -->
+          <!--   </div>                                                          -->
+          <!-- </article>                                                         -->
+          <!-- ================================================================= -->
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 6. CERTIFICATIONS AND ACHIEVEMENTS SECTION                        -->
+    <!-- Uses /certificates directory with dynamic existence validation    -->
+    <!-- ================================================================= -->
+    <section id="certifications" class="section section-certifications" data-hub-id="certifications" aria-labelledby="certs-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// NODE_06 :: VERIFIED_CREDENTIALS</div>
+          <h2 id="certs-title" class="section-title">Certifications &amp; <span class="gradient-text">Achievements</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Hackathons, technical workshops, and ongoing coursework credentials.
+          </p>
+        </div>
+
+        <div class="certifications-grid">
+          
+          <!-- CERT 1: Smart India Hackathon (SIH) -->
+          <div class="cert-card glass-panel" data-cert-id="sih" data-tilt>
+            <div class="cert-header">
+              <span class="cert-badge badge-cyan">Participant</span>
+              <span class="cert-type-tag">National Hackathon</span>
+            </div>
+            
+            <h3 class="cert-title">Smart India Hackathon (SIH)</h3>
+            <p class="cert-issuer">Ministry of Education &amp; AICTE, Government of India</p>
+            <p class="cert-desc">
+              Participated in India's flagship nationwide innovation hackathon solving complex real-world challenges.
+            </p>
+
+            <div class="cert-action">
+              <button type="button" class="btn cert-btn" data-cert-target="sih" aria-label="View Smart India Hackathon Certificate">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span class="cert-btn-text">Check Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- CERT 2: "Unlocking Agentic AI" Workshop by GDG -->
+          <div class="cert-card glass-panel" data-cert-id="agentic-ai" data-tilt>
+            <div class="cert-header">
+              <span class="cert-badge badge-violet">Workshop</span>
+              <span class="cert-type-tag">Hands-on Technical</span>
+            </div>
+            
+            <h3 class="cert-title">"Unlocking Agentic AI" Workshop</h3>
+            <p class="cert-issuer">Organized by Google Developer Groups (GDG)</p>
+            <p class="cert-desc">
+              Intensive technical exploration into autonomous agent architectures, multi-agent frameworks, tool dispatch, and prompt engineering.
+            </p>
+
+            <div class="cert-action">
+              <button type="button" class="btn cert-btn" data-cert-target="agentic-ai" aria-label="View Agentic AI Certificate">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span class="cert-btn-text">Check Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- CERT 3: IBM Data Science Methodology -->
+          <div class="cert-card glass-panel" data-cert-id="ibm-data-science-methodology" data-tilt>
+            <div class="cert-header">
+              <span class="cert-badge badge-progress">In Progress</span>
+              <span class="cert-type-tag">Professional Course</span>
+            </div>
+            
+            <h3 class="cert-title">IBM: Data Science Methodology</h3>
+            <p class="cert-issuer">IBM / Coursera</p>
+            <p class="cert-desc">
+              Comprehensive understanding of the foundational stages required to address data problems and build predictive models.
+            </p>
+
+            <div class="cert-action">
+              <button type="button" class="btn cert-btn" data-cert-target="ibm-data-science-methodology" aria-label="View IBM Data Science Methodology Certificate">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span class="cert-btn-text">Check Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- CERT 4: IBM Data Visualization -->
+          <div class="cert-card glass-panel" data-cert-id="ibm-data-visualization" data-tilt>
+            <div class="cert-header">
+              <span class="cert-badge badge-progress">In Progress</span>
+              <span class="cert-type-tag">Professional Course</span>
+            </div>
+            
+            <h3 class="cert-title">IBM: Data Visualization</h3>
+            <p class="cert-issuer">IBM / Coursera</p>
+            <p class="cert-desc">
+              Principles of information display, graphical communication, exploratory charting, and visual analytics for actionable insights.
+            </p>
+
+            <div class="cert-action">
+              <button type="button" class="btn cert-btn" data-cert-target="ibm-data-visualization" aria-label="View IBM Data Visualization Certificate">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span class="cert-btn-text">Check Certificate</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Missing Certificate Notification Toast -->
+        <div id="cert-toast" class="cert-toast" role="alert" aria-live="polite">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span id="cert-toast-msg">Certificate file coming soon!</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================================= -->
+    <!-- 7. CONTACT SECTION                                                -->
+    <!-- Includes form validation, pre-filled mailto, and large socials    -->
+    <!-- ================================================================= -->
+    <section id="contact" class="section section-contact" data-hub-id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">// NODE_07 :: SYNAPSE_DISPATCH</div>
+          <h2 id="contact-title" class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Whether you have an idea, want to talk about AI &amp; space tech, or explore collaboration opportunities.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left Column: Direct Connection Channels -->
+          <div class="contact-info-panel glass-panel" data-tilt>
+            
+            <div class="signal-header">
+              <span class="signal-radar" aria-hidden="true">
+                <span class="radar-wave"></span>
+                <span class="radar-dot"></span>
+              </span>
+              <div>
+                <h3 class="signal-title">Transmission Channel Open</h3>
+                <span class="signal-status">Status: Ready for incoming messages</span>
+              </div>
+            </div>
+
+            <p class="contact-lead-text">
+              I'm always eager to collaborate on tech projects, learn from mentors, or discuss intriguing ideas in AI/ML, C programming, and space science.
+            </p>
+
+            <!-- Large Social & Channel Links -->
+            <div class="large-channels-list">
+              
+              <!-- Email Card -->
+              <a href="mailto:njainmathania@gmail.com" class="channel-card" aria-label="Send direct email to njainmathania@gmail.com">
+                <div class="channel-icon-box">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">EMAIL DIRECT</span>
+                  <span class="channel-value">njainmathania@gmail.com</span>
+                </div>
+                <div class="channel-arrow" aria-hidden="true">→</div>
+              </a>
+
+              <!-- GitHub Card -->
+              <a href="https://github.com/nayanjain5128" target="_blank" rel="noopener noreferrer" class="channel-card" aria-label="Visit Nayan Jain on GitHub">
+                <div class="channel-icon-box">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">GITHUB REPOSITORIES</span>
+                  <span class="channel-value">github.com/nayanjain5128</span>
+                </div>
+                <div class="channel-arrow" aria-hidden="true">→</div>
+              </a>
+
+              <!-- LinkedIn Card -->
+              <a href="https://www.linkedin.com/in/nayan-jain-b10787413" target="_blank" rel="noopener noreferrer" class="channel-card" aria-label="Connect with Nayan Jain on LinkedIn">
+                <div class="channel-icon-box">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">LINKEDIN NETWORK</span>
+                  <span class="channel-value">linkedin.com/in/nayan-jain</span>
+                </div>
+                <div class="channel-arrow" aria-hidden="true">→</div>
+              </a>
+
+            </div>
+
+            <!-- Copy Email Quick Action -->
+            <div class="copy-email-bar">
+              <span class="copy-text">Fast Copy: <strong>njainmathania@gmail.com</strong></span>
+              <button type="button" id="copy-email-btn" class="copy-btn" aria-label="Copy email address to clipboard">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span id="copy-btn-text">Copy</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel glass-panel" data-tilt>
+            
+            <div class="form-header">
+              <span class="form-tag">// SEND_SIGNAL_PACKET</span>
+              <h3 class="form-title">Transmit a Message</h3>
+            </div>
+
+            <!-- 
+              ==================================================================
+              CONTACT FORM INSTRUCTION:
+              Since this site is fully static with no backend, this form validates
+              user input and immediately prepares a pre-filled mailto: email client link.
+              
+              TO SWITCH TO FORMSPREE:
+              1. Register a free endpoint at https://formspree.io/
+              2. Change the form attributes:
+                 <form action="https://formspree.io/f/YOUR_ENDPOINT_ID" method="POST">
+              3. Set `useFormspree: true` in script.js (detailed comment included).
+              ==================================================================
+            -->
+            <form id="contact-form" class="neural-form" novalidate>
+              
+              <!-- Sender Name -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  Your Name <span class="required-star">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Sharma" required autocomplete="name">
+                  <span class="input-glow-line" aria-hidden="true"></span>
+                </div>
+                <span class="error-feedback" id="name-error">Please enter your name.</span>
+              </div>
+
+              <!-- Sender Email -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  Email Address <span class="required-star">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+                  <span class="input-glow-line" aria-hidden="true"></span>
+                </div>
+                <span class="error-feedback" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Message Content -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label">
+                  Message <span class="required-star">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4" placeholder="Hello Nayan, I saw your portfolio and wanted to reach out regarding..." required></textarea>
+                  <span class="input-glow-line" aria-hidden="true"></span>
+                </div>
+                <span class="error-feedback" id="message-error">Please enter a message.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-block magnetic-btn">
+                <span class="btn-text">Transmit Signal (Send Message)</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+
+              <!-- Form Success Message Banner -->
+              <div id="form-success-banner" class="form-success-banner" style="display: none;" role="status">
+                <div class="success-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#22d3ee" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div class="success-text">
+                  <strong>Synapse Dispatched!</strong>
+                  <p>Your mail client has been opened with your pre-filled message to <code>njainmathania@gmail.com</code>.</p>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer glass-panel">
+    <div class="container footer-container">
+      
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="brand-neural-node" aria-hidden="true"></span>
+          <span class="brand-text">NAYAN JAIN</span>
+        </div>
+        <p class="footer-tagline">Living Neural Network · Computer Science (AI &amp; ML)</p>
+        <p class="footer-copy">&copy; 2026 Nayan Jain. All rights reserved.</p>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-socials" aria-label="Social profiles">
+          <li><a href="https://github.com/nayanjain5128" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+          <li><span class="sep">/</span></li>
+          <li><a href="https://www.linkedin.com/in/nayan-jain-b10787413" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><span class="sep">/</span></li>
+          <li><a href="mailto:njainmathania@gmail.com" aria-label="Email">Email</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <!-- Back to Top Button: Triggers neural pulse animation and scrolls to top -->
+        <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Back to top of page">
+          <span class="btn-top-text">Back to Top</span>
+          <span class="top-arrow-icon" aria-hidden="true">↑</span>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Emergency 4-Second Preloader Failsafe -->
+  <script>
+    setTimeout(function() {
+      try {
+        var preloader = document.getElementById('preloader');
+        if (preloader && !preloader.classList.contains('preloader-hidden')) {
+          preloader.classList.add('preloader-hidden');
+          setTimeout(function() { preloader.style.display = 'none'; }, 600);
+        }
+        document.body.classList.remove('loading-active');
+      } catch(e) {
+        console.error('Preloader failsafe trigger error:', e);
+      }
+    }, 4000);
+  </script>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
